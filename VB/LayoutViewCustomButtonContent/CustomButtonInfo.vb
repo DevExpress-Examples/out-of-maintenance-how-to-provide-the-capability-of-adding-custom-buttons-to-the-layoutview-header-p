@@ -30,43 +30,43 @@ Namespace CustomButtonsLayoutView
 		End Sub
 
 		' public properties
-        <Description("Button name. Gets or sets a name that is used to identify a button.")> _
-  Public Property Name() As String
-            Get
-                Return buttonName_
-            End Get
-            Set(ByVal value As String)
-                If value = "" Then
-                    instanceCount += 1
-                    buttonName_ = "Name" & instanceCount.ToString()
-                Else
-                    buttonName_ = value
-                End If
+		<Description("Button name. Gets or sets a name that is used to identify a button.")> _
+		Public Property Name() As String
+			Get
+				Return buttonName_
+			End Get
+			Set(ByVal value As String)
+				If value = "" Then
+					instanceCount += 1
+					buttonName_ = "Name" & instanceCount.ToString()
+				Else
+					buttonName_ = value
+				End If
 
-            End Set
-        End Property
+			End Set
+		End Property
 
-        <Description("Button width. Gets or sets a button's width. If a width is set to 0, a default button's width is used."), DefaultValue(0)> _
-  Public Property Width() As Integer
-            Get
-                Return buttonWidth_
-            End Get
-            Set(ByVal value As Integer)
-                If value >= 24 OrElse value = 0 Then
-                    buttonWidth_ = value
-                End If
-            End Set
-        End Property
+		<Description("Button width. Gets or sets a button's width. If a width is set to 0, a default button's width is used."), DefaultValue(0)> _
+		Public Property Width() As Integer
+			Get
+				Return buttonWidth_
+			End Get
+			Set(ByVal value As Integer)
+				If value >= 24 OrElse value = 0 Then
+					buttonWidth_ = value
+				End If
+			End Set
+		End Property
 
-        <Description("Button image. Gets or sets an image that is shown within a button.")> _
-  Public Property Image() As Image
-            Get
-                Return buttonImage_
-            End Get
-            Set(ByVal value As Image)
-                buttonImage_ = value
-            End Set
-        End Property
+		<Description("Button image. Gets or sets an image that is shown within a button.")> _
+		Public Property Image() As Image
+			Get
+				Return buttonImage_
+			End Get
+			Set(ByVal value As Image)
+				buttonImage_ = value
+			End Set
+		End Property
 
 		<Browsable(False)> _
 		Public Property Bounds() As Rectangle

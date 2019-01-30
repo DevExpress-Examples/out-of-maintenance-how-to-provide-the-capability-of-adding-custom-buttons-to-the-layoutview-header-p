@@ -34,16 +34,16 @@ Namespace CustomButtonsLayoutView
 		End Property
 
 		Private buttonsCollection_ As CustomButtonCollection
-        <Localizable(True), RefreshProperties(RefreshProperties.All), Description("Returns a collection of custom buttons in the LayoutView header panel."), DesignerSerializationVisibility(DesignerSerializationVisibility.Content)> _
-  Public ReadOnly Property ButtonsCollection() As CustomButtonCollection
-            Get
-                Return If(buttonsCollection_ Is Nothing, New CustomButtonCollection(), buttonsCollection_)
-            End Get
-        End Property
+		<Localizable(True), RefreshProperties(RefreshProperties.All), Description("Returns a collection of custom buttons in the LayoutView header panel."), DesignerSerializationVisibility(DesignerSerializationVisibility.Content)> _
+		Public ReadOnly Property ButtonsCollection() As CustomButtonCollection
+			Get
+				Return If(buttonsCollection_ Is Nothing, New CustomButtonCollection(), buttonsCollection_)
+			End Get
+		End Property
 
 		' let's define delegate and event, fires wgen custom button pressed
 		Public Delegate Sub LayoutViewCustomButtonEventHandler(ByVal sender As Object, ByVal e As CustomButtonEventsArgs)
-        <Description("Fires when a custom button is pressed in the layout view."), Category(CategoryName.Events)> _
-  Public Event CustomButtonClick As LayoutViewCustomButtonEventHandler
+		<Description("Fires when a custom button is pressed in the layout view."), Category(CategoryName.Events)> _
+		Public Event CustomButtonClick As LayoutViewCustomButtonEventHandler
 	End Class
 End Namespace
