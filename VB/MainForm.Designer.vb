@@ -61,11 +61,11 @@ Namespace CustomButtonsLayoutView
 			' layoutViewCustomButtonMain
 			' 
 			customViewButton1.Bounds = New System.Drawing.Rectangle(0, 0, 0, 0)
-			customViewButton1.Image = My.Resources.show_root
-			customViewButton1.Name = "Name1"
+            customViewButton1.Image = Global.Resources.show_root
+            customViewButton1.Name = "Name1"
 			customViewButton2.Bounds = New System.Drawing.Rectangle(0, 0, 0, 0)
-			customViewButton2.Image = My.Resources.category03
-			customViewButton2.Name = "Name2"
+            customViewButton2.Image = Global.Resources.category03
+            customViewButton2.Name = "Name2"
 			customViewButton2.Width = 60
 			Me.layoutViewCustomButtonMain.ButtonsCollection.Add(customViewButton1)
 			Me.layoutViewCustomButtonMain.ButtonsCollection.Add(customViewButton2)
