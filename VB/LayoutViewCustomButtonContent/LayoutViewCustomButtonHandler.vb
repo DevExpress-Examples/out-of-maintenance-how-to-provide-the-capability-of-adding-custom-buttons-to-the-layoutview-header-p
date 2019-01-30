@@ -1,5 +1,4 @@
-﻿Imports Microsoft.VisualBasic
-Imports System
+﻿Imports System
 Imports System.Collections.Generic
 Imports System.Linq
 Imports System.Text
@@ -9,17 +8,18 @@ Imports DevExpress.XtraGrid.Views.Layout.ViewInfo
 Imports DevExpress.XtraGrid.Views.Base.ViewInfo
 
 Namespace CustomButtonsLayoutView
-	Friend Class LayoutViewCustomButtonHandler
-		Inherits LayoutViewHandler
-		Public Sub New(ByVal gridView As LayoutView)
-			MyBase.New(gridView)
-		End Sub
+    Friend Class LayoutViewCustomButtonHandler
+        Inherits LayoutViewHandler
 
-		Public Overrides Sub DoClickAction(ByVal hitInfo As BaseHitInfo)
-			MyBase.DoClickAction(hitInfo)
-			Dim currentView As LayoutViewCustomButton = TryCast(View, LayoutViewCustomButton)
-			Dim currentHitInfo As LayoutViewHitInfo = TryCast(hitInfo, LayoutViewHitInfo)
-			currentView.ButtonsCollection.CheckForCustomButtonClick(CInt(Fix(currentHitInfo.HitTest)))
-		End Sub
-	End Class
+        Public Sub New(ByVal gridView As LayoutView)
+            MyBase.New(gridView)
+        End Sub
+
+        Public Overrides Sub DoClickAction(ByVal hitInfo As BaseHitInfo)
+            MyBase.DoClickAction(hitInfo)
+            Dim currentView As LayoutViewCustomButton = TryCast(View, LayoutViewCustomButton)
+            Dim currentHitInfo As LayoutViewHitInfo = TryCast(hitInfo, LayoutViewHitInfo)
+            currentView.ButtonsCollection.CheckForCustomButtonClick(CInt((currentHitInfo.HitTest)))
+        End Sub
+    End Class
 End Namespace
